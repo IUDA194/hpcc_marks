@@ -1,0 +1,6 @@
+ERROR 2023-12-27 11:55:50,642 Internal Server Error: /logs/
+dasdasdas
+ERROR 2023-12-27 11:55:50,643 "GET /logs/ HTTP/1.1" 500 217881
+dasdsadasdas
+INFO 2023-12-27 11:56:08,888 "GET /logs/ HTTP/1.1" 200 355509
+dadsads

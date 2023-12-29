@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logs Viewer</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #282c34;
+      color: #abb2bf;
+      margin: 1px;
+      padding: 2px;
+    }
+
+    h3 {
+        text-align: center;
+    }
+  
+    .log {
+      line-height: 1.7;
+      border: 1px solid #3e4451;
+      margin: 10px;
+      padding: 10px;
+      cursor: pointer;
+      background-color: #3e4451;
+      transition: background-color 0.3s;
+      position: relative;
+    }
+  
+    .log:hover {
+      background-color: #4b5261;
+    }
+  
+    .details {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #464c57;
+      background-color: #2e333e;
+      white-space: pre-wrap; /* Preserve line breaks and spaces */
+    }
+  
+    .error {
+      margin: 5px;
+      border: 1px solid #e06c75;
+      padding: 5px;
+      color: #e06c75;
+      background-color: #3e4451;
+    }
+  
+    .info {
+      margin: 5px;
+      border: 1px solid #98c379;
+      padding: 5px;
+      color: #98c379;
+      background-color: #3e4451;
+    }
+  
+    .warning {
+      margin: 5px;
+      border: 1px solid #61afef;
+      padding: 5px;
+      color: #61afef;
+      background-color: #3e4451;
+    }
+  
+    .debug {
+      margin: 5px;
+      border: 1px solid #e5c07b;
+      padding: 5px;
+      color: #e5c07b;
+      background-color: #3e4451;
+    }
+
+    .toggle-button {
+      position: absolute;
+      top: 50%;
+      margin-top: -0.225em;
+      background-color: rgb(70, 69, 69);
+      border: none;
+      color: #abb2bf;
+      padding: 4px;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      opacity: 0; /* Скрыть кнопку при открытии */
+      transition: opacity 0.3s;
+    }
+
+    .log:hover .toggle-button {
+      opacity: 1; /* Показать кнопку при наведении на лог */
+    }
+
+    .toggle-button:hover {
+      background-color: #3e4451;
+    }
+
+    ::-webkit-scrollbar {
+    width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+    background-color: #bebebe;
+    border-radius: 6px;
+    }
+
+
+    ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.23);
+    }
+
+    ::-webkit-scrollbar-track:hover {
+    background-color: #ddd;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+    background-color: rgba(0, 0, 0, 0.23);
+    }
+
+
+  </style>  
+</head>
+<body>
+
+<h3>Marks Logs</h3>
+
+<script>
+  function toggleDetails(index) {
+    var details = document.getElementById('details_' + index);
+    var button = document.getElementById('button_' + index);
+
+    if (details.style.display === 'none') {
+      details.style.display = 'block';
+      button.textContent = 'Close';
+    } else {
+      details.style.display = 'none';
+      button.textContent = 'Details';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var logs = {{logs|safe}};
+
+    var logsContainer = document.body;
+
+    logs.forEach(function (log, index) {
+      var logElement = document.createElement('div');
+      logElement.className = 'log';
+
+      var messageElement = document.createElement('div');
+
+      if (log.message.includes('ERROR')) {
+        messageElement.innerHTML = log.message.replace(/ERROR/g, '<span class="error">ERROR</span>');
+      } else if (log.message.includes('INFO')) {
+        messageElement.innerHTML = log.message.replace(/INFO/g, '<span class="info">INFO</span>');
+      } else if (log.message.includes('WARNING')) {
+        messageElement.innerHTML = log.message.replace(/WARNING/g, '<span class="warning">WARNING</span>');
+      } else if (log.message.includes('DEBUG')) {
+        messageElement.innerHTML = log.message.replace(/DEBUG/g, '<span class="debug">DEBUG</span>');
+      } else {
+        messageElement.textContent = log.message;
+      }
+
+      logElement.appendChild(messageElement);
+
+      if (log.last_deteil.length > 0) {
+        var detailsElement = document.createElement('div');
+        detailsElement.className = 'details';
+        detailsElement.id = 'details_' + index;
+
+        log.last_deteil.forEach(function (detail) {
+          var detailLine = document.createElement('div');
+          detailLine.textContent = detail;
+          detailsElement.appendChild(detailLine);
+        });
+
+        logElement.appendChild(detailsElement);
+
+        var toggleButton = document.createElement('button');
+        toggleButton.className = 'toggle-button';
+        toggleButton.id = 'button_' + index;
+        toggleButton.textContent = 'Details';
+
+        toggleButton.addEventListener('click', function () {
+          toggleDetails(index);
+        });
+
+        logElement.appendChild(toggleButton);
+      }
+
+      logsContainer.appendChild(logElement);
+    });
+  });
+</script>
+
+</body>
+</html>

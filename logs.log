@@ -1,0 +1,124 @@
+INFO 2023-12-29 04:48:25,512 Watching for file changes with StatReloader
+INFO 2023-12-29 04:48:25 Watching for file changes with StatReloader
+INFO 2023-12-29 04:48:47,958 /Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/logs/views.py changed, reloading.
+INFO 2023-12-29 04:48:47 /Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/logs/views.py changed, reloading.
+INFO 2023-12-29 04:48:48,239 Watching for file changes with StatReloader
+INFO 2023-12-29 04:48:48 Watching for file changes with StatReloader
+INFO 2023-12-29 04:48:50,412 /Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/logs/views.py changed, reloading.
+INFO 2023-12-29 04:48:50 /Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/logs/views.py changed, reloading.
+INFO 2023-12-29 04:48:50,612 Watching for file changes with StatReloader
+INFO 2023-12-29 04:48:50 Watching for file changes with StatReloader
+INFO 2023-12-29 04:48:53,787 /Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/logs/views.py changed, reloading.
+INFO 2023-12-29 04:48:53 /Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/logs/views.py changed, reloading.
+INFO 2023-12-29 04:48:53,975 Watching for file changes with StatReloader
+INFO 2023-12-29 04:48:53 Watching for file changes with StatReloader
+INFO 2023-12-29 04:48:56,152 /Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/logs/views.py changed, reloading.
+INFO 2023-12-29 04:48:56 /Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/logs/views.py changed, reloading.
+INFO 2023-12-29 04:48:56,333 Watching for file changes with StatReloader
+INFO 2023-12-29 04:48:56 Watching for file changes with StatReloader
+INFO 2023-12-29 04:48:58,510 /Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/logs/views.py changed, reloading.
+INFO 2023-12-29 04:48:58 /Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/logs/views.py changed, reloading.
+INFO 2023-12-29 04:48:58,716 Watching for file changes with StatReloader
+INFO 2023-12-29 04:48:58 Watching for file changes with StatReloader
+WARNING 2023-12-29 04:48:59,934 Not Found: /
+WARNING 2023-12-29 04:48:59 Not Found: /
+WARNING 2023-12-29 04:48:59,935 "GET / HTTP/1.1" 404 2274
+WARNING 2023-12-29 04:48:59 "GET / HTTP/1.1" 404 2274
+ERROR 2023-12-29 04:49:02,725 Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "/Users/aroslavgladkij/Documents/GitHub/hpcc_marks/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aroslavgladkij/Documents/GitHub/hpcc_marks/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/logs/views.py", line 49, in log_view
+    return render(request, 'logs.html', {'logs': logs_formated[::-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aroslavgladkij/Documents/GitHub/hpcc_marks/venv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aroslavgladkij/Documents/GitHub/hpcc_marks/venv/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aroslavgladkij/Documents/GitHub/hpcc_marks/venv/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: logs.html
+ERROR 2023-12-29 04:49:02 Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "/Users/aroslavgladkij/Documents/GitHub/hpcc_marks/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aroslavgladkij/Documents/GitHub/hpcc_marks/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/logs/views.py", line 49, in log_view
+    return render(request, 'logs.html', {'logs': logs_formated[::-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aroslavgladkij/Documents/GitHub/hpcc_marks/venv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aroslavgladkij/Documents/GitHub/hpcc_marks/venv/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aroslavgladkij/Documents/GitHub/hpcc_marks/venv/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: logs.html
+ERROR 2023-12-29 04:49:02,728 "GET /logs/ HTTP/1.1" 500 96691
+ERROR 2023-12-29 04:49:02 "GET /logs/ HTTP/1.1" 500 96691
+INFO 2023-12-29 04:49:49,723 /Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/hpcc_marks/settings.py changed, reloading.
+INFO 2023-12-29 04:49:49 /Users/aroslavgladkij/Documents/GitHub/hpcc_marks/hpcc_marks/hpcc_marks/settings.py changed, reloading.
+INFO 2023-12-29 04:49:50,068 Watching for file changes with StatReloader
+INFO 2023-12-29 04:49:50 Watching for file changes with StatReloader
+INFO 2023-12-29 04:49:51,850 "GET /logs/ HTTP/1.1" 200 12581
+INFO 2023-12-29 04:49:51 "GET /logs/ HTTP/1.1" 200 12581
+INFO 2023-12-29 04:50:15,509 "GET /logs/ HTTP/1.1" 200 12773
+INFO 2023-12-29 04:50:15 "GET /logs/ HTTP/1.1" 200 12773
+INFO 2023-12-29 04:54:28 file_cache is only supported with oauth2client<4.0.0
+DEBUG 2023-12-29 04:54:28 URL being requested: GET https://sheets.googleapis.com/v4/spreadsheets/1rbQe4whW1oz5EOnjjfhPMzmIme-4N9lx8o1hSzOtNgM?alt=json
+INFO 2023-12-29 04:54:28 Attempting refresh to obtain initial access_token
+DEBUG 2023-12-29 04:54:28 [b'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImFmODcxMTVmYTQ5Njk2NzhiM2FlOTQxOTU3MWY5ZGE1ZDFhY2ZhYjIifQ', b'eyJhdWQiOiJodHRwczovL29hdXRoMi5nb29nbGVhcGlzLmNvbS90b2tlbiIsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9zcHJlYWRzaGVldHMgaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kcml2ZSIsImlhdCI6MTcwMzgyNTY2OCwiZXhwIjoxNzAzODI5MjY4LCJpc3MiOiJraHBjY2FkbWluQGZpbGxibGFua3NraHBjYy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSJ9', b'XhJz0kWnQfoqiK_sImQ8BLtmu5Pm1Nz1rkeROj67ir_Ni4bwRlgmvp1S5AQMQU1UsQ9x8LXeNqZoZMPpe-D3m1jlRqyLCs5cuquKDGnyi7le41kTthqjzc-eSLJxoOxGDfEws6yuU7hhKroEE5v32wwaoKJO500sgkpTiOs2us03CgwLvDnh9QEyBD6QNCo3wTukMWaX_ljCEbgNpDELfDaQWpjzgrC89x50BdbGm0a2FPEBqChW6xcheMRvjzt0WB-dCrlyG_9icjl6Ketuidg-Jzxmuf22qXvng1dXesHz4eT0wMzYRI1PuVhpJASXGthjTRQmqvpDgxGOBGcJuw']
+INFO 2023-12-29 04:54:28 Refreshing access_token
+INFO 2023-12-29 04:54:28,891 "GET /marks/lessons/ HTTP/1.1" 200 77
+INFO 2023-12-29 04:54:28 "GET /marks/lessons/ HTTP/1.1" 200 77
+INFO 2023-12-29 04:54:31 file_cache is only supported with oauth2client<4.0.0
+DEBUG 2023-12-29 04:54:31 URL being requested: GET https://sheets.googleapis.com/v4/spreadsheets/1rbQe4whW1oz5EOnjjfhPMzmIme-4N9lx8o1hSzOtNgM?alt=json
+INFO 2023-12-29 04:54:31 Attempting refresh to obtain initial access_token
+DEBUG 2023-12-29 04:54:31 [b'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImFmODcxMTVmYTQ5Njk2NzhiM2FlOTQxOTU3MWY5ZGE1ZDFhY2ZhYjIifQ', b'eyJhdWQiOiJodHRwczovL29hdXRoMi5nb29nbGVhcGlzLmNvbS90b2tlbiIsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9zcHJlYWRzaGVldHMgaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kcml2ZSIsImlhdCI6MTcwMzgyNTY3MSwiZXhwIjoxNzAzODI5MjcxLCJpc3MiOiJraHBjY2FkbWluQGZpbGxibGFua3NraHBjYy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSJ9', b'pYPCxQBNxnVFnvXIGmDggY9CZesluBKbD-3sSUNRZwufvJ2ulJeLm1shL90Qs5wo4hkYB9Fl33LnZkVe4LZ1hj-CoY1dSmiKOWM-AY76VqcRNjnEq1W_nhoJHVqus4sK7-5NZPiNAD_mB2pAGjrdzm1car6yCO5nED-van_dEeDcXF_iVD3Uc5btYa_TWznEm9XxFJmWxz7n0R20app2zIBxb3BPL0eVJ8ncSlMOMpbpsSjM4lt-aZU42F0ZGoD4sF4pvozGMIVw4mkf4eaYruYFyDRyawyiTKvvDBd3tUbT3Gq1t0uL3w8u6lvVBTQ6KJGjPRePb5MI0qLHTALifg']
+INFO 2023-12-29 04:54:31 Refreshing access_token
+INFO 2023-12-29 04:54:32,066 "GET /marks/lessons/ HTTP/1.1" 200 77
+INFO 2023-12-29 04:54:32 "GET /marks/lessons/ HTTP/1.1" 200 77
+INFO 2023-12-29 04:54:35,234 "GET /users/mark/ HTTP/1.1" 200 6309
+INFO 2023-12-29 04:54:35 "GET /users/mark/ HTTP/1.1" 200 6309
+INFO 2023-12-29 04:54:35,318 "GET /users/?name=Student%201&password=121 HTTP/1.1" 200 87
+INFO 2023-12-29 04:54:35 "GET /users/?name=Student%201&password=121 HTTP/1.1" 200 87
+INFO 2023-12-29 04:54:35 file_cache is only supported with oauth2client<4.0.0
+DEBUG 2023-12-29 04:54:35 URL being requested: GET https://sheets.googleapis.com/v4/spreadsheets/1rbQe4whW1oz5EOnjjfhPMzmIme-4N9lx8o1hSzOtNgM?alt=json
+INFO 2023-12-29 04:54:35 Attempting refresh to obtain initial access_token
+DEBUG 2023-12-29 04:54:35 [b'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImFmODcxMTVmYTQ5Njk2NzhiM2FlOTQxOTU3MWY5ZGE1ZDFhY2ZhYjIifQ', b'eyJhdWQiOiJodHRwczovL29hdXRoMi5nb29nbGVhcGlzLmNvbS90b2tlbiIsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9zcHJlYWRzaGVldHMgaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kcml2ZSIsImlhdCI6MTcwMzgyNTY3NSwiZXhwIjoxNzAzODI5Mjc1LCJpc3MiOiJraHBjY2FkbWluQGZpbGxibGFua3NraHBjYy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSJ9', b'iLPaw5FZrvekjTjV_vHks-fcJpzHvIb01x2AXD5DkU1FiUeizK5bTZvHfYC26Ou8bTpPnEmzYjLxhoAc47lidjJUSP-YEI3-FfPyrNmBbD75zLPxOTnbtfmhC9J018DE4bDXgqMWRiMVLHULw6Zu7p9O02u-cG8bfbRmaiRBNj2FnIgM_3uWbOf9-ABEchQdNmzCJm_oxuQZzDBmt0IZUpk9ybFp33scFOHyIBBMdpMBBrNsZUg9GhVxYDIAbNR4aQUa6F-o7irI8YZIvzQzaSIjzxjP9G9oX_NyMZJ3zduD3rNHj-4XyQaKIPI7IUcaKcsOzogbius6ShwBKnGLhg']
+INFO 2023-12-29 04:54:35 Refreshing access_token
+INFO 2023-12-29 04:54:36,049 "GET /marks/lessons/ HTTP/1.1" 200 77
+INFO 2023-12-29 04:54:36 "GET /marks/lessons/ HTTP/1.1" 200 77
+INFO 2023-12-29 04:54:37 file_cache is only supported with oauth2client<4.0.0
+DEBUG 2023-12-29 04:54:37 URL being requested: GET https://sheets.googleapis.com/v4/spreadsheets/1rbQe4whW1oz5EOnjjfhPMzmIme-4N9lx8o1hSzOtNgM/values:batchGet?ranges=%D0%A3%D0%BA%D1%80+%D0%BB%D1%96%D1%82%21A1%3AAX50&valueRenderOption=FORMATTED_VALUE&dateTimeRenderOption=FORMATTED_STRING&alt=json
+INFO 2023-12-29 04:54:37 Attempting refresh to obtain initial access_token
+DEBUG 2023-12-29 04:54:37 [b'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImFmODcxMTVmYTQ5Njk2NzhiM2FlOTQxOTU3MWY5ZGE1ZDFhY2ZhYjIifQ', b'eyJhdWQiOiJodHRwczovL29hdXRoMi5nb29nbGVhcGlzLmNvbS90b2tlbiIsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9zcHJlYWRzaGVldHMgaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kcml2ZSIsImlhdCI6MTcwMzgyNTY3NywiZXhwIjoxNzAzODI5Mjc3LCJpc3MiOiJraHBjY2FkbWluQGZpbGxibGFua3NraHBjYy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSJ9', b'MDQszu90PgGKJUKNH7Mi0URGLDC17-mmUhtKrwo606RYUuw9dfxpvUdgL_nhE8LMEtvNdrC5PAYmvGfp5KE3D0fmOEe8tfcbbgReh31lthm7oiaR70uKxUnzEYOmC-AwwjMX8syo6SJFhsOuAn68VuQ-l9WajQlPLB2OKty-3Zit0Et-a30YRYTFm6SgLvdzQTNRAmvN719_VkP1_2Jk2h0GPjcYYoYE2W1_4nwOCxScMKQf6fWtHjWmgZGgSENOcU_cz5In9jgD-vb1EtQ5lqE0SnJ-sk5vC7-5aA3i01CZVjH9UKdH2-0xVxJ3CToSKH6B3D4pj6YX7YnkQINvDQ']
+INFO 2023-12-29 04:54:37 Refreshing access_token
+INFO 2023-12-29 04:54:38,418 "GET /marks/?name=Student%201&lesson=%D0%A3%D0%BA%D1%80%20%D0%BB%D1%96%D1%82 HTTP/1.1" 200 90
+INFO 2023-12-29 04:54:38 "GET /marks/?name=Student%201&lesson=%D0%A3%D0%BA%D1%80%20%D0%BB%D1%96%D1%82 HTTP/1.1" 200 90
+INFO 2023-12-29 04:54:39 file_cache is only supported with oauth2client<4.0.0
+DEBUG 2023-12-29 04:54:40 URL being requested: GET https://sheets.googleapis.com/v4/spreadsheets/1rbQe4whW1oz5EOnjjfhPMzmIme-4N9lx8o1hSzOtNgM/values:batchGet?ranges=%D0%9F%21A1%3AAX50&valueRenderOption=FORMATTED_VALUE&dateTimeRenderOption=FORMATTED_STRING&alt=json
+INFO 2023-12-29 04:54:40 Attempting refresh to obtain initial access_token
+DEBUG 2023-12-29 04:54:40 [b'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImFmODcxMTVmYTQ5Njk2NzhiM2FlOTQxOTU3MWY5ZGE1ZDFhY2ZhYjIifQ', b'eyJhdWQiOiJodHRwczovL29hdXRoMi5nb29nbGVhcGlzLmNvbS90b2tlbiIsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9zcHJlYWRzaGVldHMgaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kcml2ZSIsImlhdCI6MTcwMzgyNTY4MCwiZXhwIjoxNzAzODI5MjgwLCJpc3MiOiJraHBjY2FkbWluQGZpbGxibGFua3NraHBjYy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSJ9', b'mQ3z4lLDSN17H3eXa4wIkS0jFw22ME4nOe2wBVdnlGka6xi2AD9xZUGb6APqkXo6QQXCHrNxrtS7Jhq0a-Iu5YGISRIYVrXxULCAPKgBXZZwlmIH14XGLEb_Wm_4ANVPPCxXzFEPmbxm5T2zKhLtXxszM5M87Vg8EzQPHMTWldI2nXlvkufVH68y0O7BMUCdHPPGhDQje0jfv49vCVFRLpYJa3rShKCsq7-lHYbS0cJ2nblwxyjjlFEMAAOOpP5fb3t3tuIc-jnqwixSN5ynlrdSWdjhM3uDyMJV4Zl87zkqF6J0vxZcdc0rxj_QQDZ3Co9_xnroJr9i7RuuAjSBYw']
+INFO 2023-12-29 04:54:40 Refreshing access_token
+INFO 2023-12-29 04:54:40,565 "GET /marks/?name=Student%201&lesson=%D0%9F HTTP/1.1" 200 90
+INFO 2023-12-29 04:54:40 "GET /marks/?name=Student%201&lesson=%D0%9F HTTP/1.1" 200 90
+INFO 2023-12-29 04:54:43 file_cache is only supported with oauth2client<4.0.0
+DEBUG 2023-12-29 04:54:43 URL being requested: GET https://sheets.googleapis.com/v4/spreadsheets/1rbQe4whW1oz5EOnjjfhPMzmIme-4N9lx8o1hSzOtNgM/values:batchGet?ranges=%D0%A3%D0%BA%D1%80+%D0%BB%D1%96%D1%82%21A1%3AAX50&valueRenderOption=FORMATTED_VALUE&dateTimeRenderOption=FORMATTED_STRING&alt=json
+INFO 2023-12-29 04:54:43 Attempting refresh to obtain initial access_token
+DEBUG 2023-12-29 04:54:43 [b'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImFmODcxMTVmYTQ5Njk2NzhiM2FlOTQxOTU3MWY5ZGE1ZDFhY2ZhYjIifQ', b'eyJhdWQiOiJodHRwczovL29hdXRoMi5nb29nbGVhcGlzLmNvbS90b2tlbiIsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9zcHJlYWRzaGVldHMgaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kcml2ZSIsImlhdCI6MTcwMzgyNTY4MywiZXhwIjoxNzAzODI5MjgzLCJpc3MiOiJraHBjY2FkbWluQGZpbGxibGFua3NraHBjYy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSJ9', b'gTq5ixBEbcviklwGjy-iFdXO0TWIaOBScdLaxh89Xj_jSFcCQjDnXYYtXmMJzdyQ-_3LHDtzLq8HnfZgxP6coZj9tTm6JNLbpPq24x1PMnxVaxDctXXSajQIWKZJfwn9-b7novVBrI6VEgRgYemiGS_dF3VrIEqKAPwXEG3e-ilp7tXI_qDuxbtGp549_2dzzFCxZreYKH1vBfPf32F6OnwDJVbNZ3Q2V80iLsZR0uOjL8len1BG_jdYGvKS3KjCIAvNwI5eVxl3Ul88NCLS45jJlGCwQa3tZki3NSQUxCIrynnEYmb_V6ubt-h5rKZpev8SOA8vmyq0sk_gRa9q6Q']
+INFO 2023-12-29 04:54:43 Refreshing access_token
+INFO 2023-12-29 04:54:43,740 "GET /marks/?name=Student%201&lesson=%D0%A3%D0%BA%D1%80%20%D0%BB%D1%96%D1%82 HTTP/1.1" 200 90
+INFO 2023-12-29 04:54:43 "GET /marks/?name=Student%201&lesson=%D0%A3%D0%BA%D1%80%20%D0%BB%D1%96%D1%82 HTTP/1.1" 200 90
+INFO 2023-12-29 04:55:20,878 "GET /users/page/ HTTP/1.1" 200 4002
+INFO 2023-12-29 04:55:20 "GET /users/page/ HTTP/1.1" 200 4002
