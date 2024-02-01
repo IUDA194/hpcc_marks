@@ -3,9 +3,15 @@ from django.http import JsonResponse
 from dotrest.DOTREST import Simple_View, Serialyzers
 from marks.marks import table
 
+arr = ["П", "вфівф"]
+
 class lessons(Simple_View):
     def get(self, request):
         result = table().get_sheets()
+
+        for i in arr:
+            try: result.remove(i)
+            except: pass
 
         return JsonResponse({"status" : True, 
                              "data" : result})
@@ -19,4 +25,4 @@ class marks_v(Simple_View):
         result = table().get_data(lesson)
 
         return JsonResponse({"status" : True, 
-                             "data" : result[user_name]})
+                             "data" : result[user_name][::-1]})
