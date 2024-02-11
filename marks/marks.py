@@ -5,7 +5,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 import os
 
 class table:
-    path = '/Users/aroslavgladkij/Documents/GitHub/hpcc-cards/hpcctable/fillblankskhpcc-af87115fa496.json'
+    path = os.getenv("KEY_FILE_PATH")
     spreadsheetId = "1rbQe4whW1oz5EOnjjfhPMzmIme-4N9lx8o1hSzOtNgM"
     
     service = None
