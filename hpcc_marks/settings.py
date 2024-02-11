@@ -118,6 +118,8 @@ CORS_ALLOW_HEADERS = (
     "x-requested-with",
 )
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
