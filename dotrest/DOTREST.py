@@ -6,8 +6,9 @@ class Simple_View:
     def route(self,request):
         match request.method:
             case "GET":                 
-                try: return self.get(request)
-                except AttributeError: return self.else_m(request)
+                #try: 
+                return self.get(request)
+                #except AttributeError: return self.else_m(request)
             case "POST": 
                 try: return self.post(request)
                 except AttributeError: return self.else_m(request)

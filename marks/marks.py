@@ -13,9 +13,9 @@ class table:
     credentials = None
     sheet_name = None
 
-    def __init__(self) -> None:
-        CREDENTIALS_FILE = self.path  # Имя файла с закрытым ключом, вы должны подставить свое
-        self.spreadsheetId = "1rbQe4whW1oz5EOnjjfhPMzmIme-4N9lx8o1hSzOtNgM"
+    def __init__(self, key_file : str, spreadsheetId : str) -> None:
+        CREDENTIALS_FILE = key_file  # Имя файла с закрытым ключом, вы должны подставить свое
+        self.spreadsheetId = spreadsheetId
         # Читаем ключи из файла
         self.credentials = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive'])
 
